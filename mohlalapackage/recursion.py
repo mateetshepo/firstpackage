@@ -21,11 +21,10 @@ def fibonacci(n):
 def factorial(n):
 
     '''Return n!'''
-    num = 1
-    while num >= 1:
-        num = num * n
-        n = n-1
-    return num
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
 
 
 def reverse(word):
