@@ -46,8 +46,8 @@ def merge_sort(items):
 
 
 def quick_sort(items):
-'''Return array of items, sorted in ascending order'''
- if len(items) == 1 or len(items) == 0:
+    '''Return array of items, sorted in ascending order'''
+    if len(items) == 1 or len(items) == 0:
         return items
     else:
         pivot = items[0]
