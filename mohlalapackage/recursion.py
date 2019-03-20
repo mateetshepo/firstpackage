@@ -46,22 +46,18 @@ def merge_sort(items):
 
 
 def quick_sort(items):
-
-    '''Return array of items, sorted in ascending order'''
-    less = []
-    equal = []
-    greater = []
-
-    if len(item) > 1:
-        pivot = item[0]
-        for x in item:
-            if x < pivot:
-                less.append(x)
-            elif x == pivot:
-                equal.append(x)
-            else x > pivot:
-                greater.append(x)
-        return sort(less)+equal+sort(greater)
-
+'''Return array of items, sorted in ascending order'''
+ if len(items) == 1 or len(items) == 0:
+        return items
     else:
-        return item
+        pivot = items[0]
+        i = 0
+        for j in range(len(items)-1):
+            if items[j+1] < pivot:
+                items[j+1],items[i+1] = items[i+1], items[j+1]
+                i += 1
+        items[0],items[i] = items[i],items[0]
+        first_part = quick_sort(items[:i])
+        second_part = quick_sort(items[i+1:])
+        first_part.append(items[i])
+        return first_part + second_part

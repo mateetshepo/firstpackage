@@ -10,5 +10,5 @@ setup(
     install_requires=['numpy'],
     url='https://github.com/mateetshepo/mohlalapackage',
     author='Mmatshepho Mohlala',
-    author_email='matshepophurutsi'
+    author_email='matshepophurutsi@gmail.com'
 )
